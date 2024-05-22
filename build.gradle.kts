@@ -16,6 +16,12 @@ plugins {
 group = properties("pluginGroup").get()
 version = properties("pluginVersion").get()
 
+idea {
+    module {
+        isDownloadJavadoc = true
+    }
+}
+
 // Configure project's dependencies
 repositories {
     mavenCentral()
