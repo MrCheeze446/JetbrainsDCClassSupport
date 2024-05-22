@@ -5,14 +5,14 @@
     <vendor>MrCheeze446</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType name="DCClass File"
+                  implementationClass="com.github.mrcheeze446.jetbrainsdcclasssupport.language.DCClassType"
+                  fieldName="INSTANCE"
+                  language="DCClass"
+                  extensions="dc"/>
+    </extensions>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.mrcheeze446.jetbrainsdcclasssupport.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-    </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.mrcheeze446.jetbrainsdcclasssupport.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
 </idea-plugin>

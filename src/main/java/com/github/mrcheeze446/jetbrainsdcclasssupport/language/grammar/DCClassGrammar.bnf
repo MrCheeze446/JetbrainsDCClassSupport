@@ -1,0 +1,5 @@
+{
+    parserClass="com.github.mrcheeze446.jetbrainsdcclasssupport.language.parser.DCClassParser"
+
+    extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+}
