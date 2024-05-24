@@ -1,7 +1,6 @@
 package com.github.mrcheeze446.jetbrainsdcclasssupport.language;
 
 import com.intellij.openapi.fileTypes.LanguageFileType;
-import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
@@ -17,13 +16,13 @@ public final class DCClassType extends LanguageFileType {
     @Override
     @NotNull
     public String getName() {
-        return "DCClass File";
+        return "Panda3D DC File";
     }
 
     @Override
     @NotNull
     public String getDescription() {
-        return "A Distributed Class file used by Panda3D";
+        return "A distributed class file used by panda3D";
     }
 
     @Override

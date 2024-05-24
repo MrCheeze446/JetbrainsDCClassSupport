@@ -6,11 +6,20 @@
 
     <depends>com.intellij.modules.platform</depends>
     <extensions defaultExtensionNs="com.intellij">
-        <fileType name="DCClass File"
+        <fileType name="Panda3D DC File"
                   implementationClass="com.github.mrcheeze446.jetbrainsdcclasssupport.language.DCClassType"
                   fieldName="INSTANCE"
                   language="DCClass"
                   extensions="dc"/>
+        <lang.parserDefinition
+                language="DCClass"
+                implementationClass="com.github.mrcheeze446.jetbrainsdcclasssupport.language.DCClassParserDefinition"/>
+        <lang.syntaxHighlighterFactory
+                language="DCClass"
+                implementationClass="com.github.mrcheeze446.jetbrainsdcclasssupport.language.DCClassSyntaxHighlighterFactory"/>
+        <colorSettingsPage
+                implementation="com.github.mrcheeze446.jetbrainsdcclasssupport.language.DCClassColorSettingsPage"/>
+
     </extensions>
 
     <resource-bundle>messages.MyBundle</resource-bundle>

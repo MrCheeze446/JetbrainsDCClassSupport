@@ -16,6 +16,8 @@ plugins {
 group = properties("pluginGroup").get()
 version = properties("pluginVersion").get()
 
+sourceSets["main"].java.srcDirs("src/main/gen")
+
 idea {
     module {
         isDownloadJavadoc = true

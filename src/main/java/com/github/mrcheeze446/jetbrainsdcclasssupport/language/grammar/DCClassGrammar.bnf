@@ -1,37 +1,20 @@
 {
-    parserClass="com.github.mrcheeze446.jetbrainsdcclasssupport.language.parser.DCClassParser"
+  parserClass="com.github.mrcheeze446.jetbrainsdcclasssupport.language.parser"
 
-    extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
 
-    tokens=[
-        SEMI = ";"
-        EQ = "="
-        LP="("
-        RP=")"
-        LB="["
-        RB="]"
-        LCB="{"
-        RCB="}"
-        MOD = "%"
-        MULTIPLY = "*"
-        PLUS = "+"
-        MINUS = "-"
-        DIVIDE = "/"
+  psiClassPrefix="DC"
+  psiImplClassSuffix="Impl"
+  psiPackage="com.github.mrcheeze446.jetbrainsdcclasssupport.language.psi"
+  psiImplPackage="com.github.mrcheeze446.jetbrainsdcclasssupport.language.psi"
 
-        letter = 'regexp:[aA-zZ]'
-        decDigit = 'regexp:\d'
-        octDigit = "regexp:[0-7]"
-        hexDigit_1 = "regexp:\d"
-        hexDigit_2 = "[aA-fF]"
-        binDigit_0 = "0"
-        binDigit_1 = "1"
-
-
-        string="regexp:('([^\\]|\\.)*'|\"([^\"\\]|\\.)*\")"
-        nonSingleQoute='"'
-        SingleQuote="'"
-        escapeCharacter="\\"
-
-        decimal = 'regexp:\d+(\.\d*)?'
-    ]
+  elementTypeHolderClass="com.github.mrcheeze446.jetbrainsdcclasssupport.language.DCClassTypes"
+  elementTypeClass="com.github.mrcheeze446.jetbrainsdcclasssupport.language.psi.DCClassElementType"
+  tokenTypeClass="com.github.mrcheeze446.jetbrainsdcclasssupport.language.psi.DCClassTokenType"
 }
+
+dcFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+
+property ::= (KEY? SEPARATOR VALUE?) | KEY
